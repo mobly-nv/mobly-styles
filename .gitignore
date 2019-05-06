@@ -1,0 +1,24 @@
+# OS
+# ------------------- /
+.DS_Store
+Thumbs.db
+
+# IDE
+# ------------------- /
+.idea
+.vscode
+
+# Frameworks
+# ------------------- /
+# Git
+.git
+# Node
+*.log
+logs
+npm-debug.log*
+/node_modules
+
+# Project specific
+# ------------------- /
+.stylelint
+dist
