@@ -1,0 +1,15 @@
+// Icons
+// ----
+// ------------------------------------------------------------------------ /
+
+.q-icon-fill {
+  @extend %q-icon;
+
+  font-family: "MoblyconsFill", monospace !important;
+}
+
+.q-icon-line {
+  @extend %q-icon;
+
+  font-family: "MoblyconsLine", monospace !important;
+}

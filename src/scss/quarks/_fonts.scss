@@ -1,0 +1,8 @@
+// Fonts
+// ----
+// ------------------------------------------------------------------------ /
+
+$moblycons-font-path: "../../assets/fonts/moblycons";
+
+@include font-face("MoblyconsFill", "#{$moblycons-font-path}/moblycons-fill");
+@include font-face("MoblyconsLine", "#{$moblycons-font-path}/moblycons-line");
