@@ -1,0 +1,35 @@
+// Functions
+// ----
+// ------------------------------------------------------------------------ /
+
+// Units & helpers
+// ------------------------------------------------------------------------ /
+@function minus-1px($_val) {
+  $current-unit: unit($_val);
+  $unitless: unitless($_val);
+  $stripped-val: strip-unit($_val);
+
+  @if $current-unit != "px" {
+    @warn "The given value `#{$_val}` should be in pixels.";
+  }
+
+  @if $unitless or $current-unit == "px" {
+    @return $_val - 1px;
+  }
+
+  @if $current-unit == "em" or $current-unit == "rem" {
+    $pixel-val: $stripped-val * $font-size-base;
+
+    @return $pixel-val - 1px;
+  }
+}
+
+// Layer z-index
+// ------------------------------------------------------------------------ /
+@function layer($_layer) {
+  @if not map-has-key($z-index, $_layer) {
+    @warn 'The layer `#{$_layer}` could not be found in the $z-index map.';
+  }
+
+  @return map-get($z-index, $_layer);
+}

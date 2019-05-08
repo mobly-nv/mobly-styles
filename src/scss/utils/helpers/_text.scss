@@ -1,0 +1,97 @@
+// Text helpers
+// ----
+// ------------------------------------------------------------------------ /
+
+// Alignment
+// ------------------------------------------------------------------------ /
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-justify {
+  text-align: justify;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+// Color
+// ------------------------------------------------------------------------ /
+.u-text-black {
+  color: $black;
+}
+
+.u-text-blue {
+  color: $primary-blue;
+}
+
+.u-text-yellow {
+  color: $primary-yellow;
+}
+
+.u-text-grey-2x-dark {
+  color: $grey-2x-dark;
+}
+
+.u-text-grey-1x-dark {
+  color: $grey-1x-dark;
+}
+
+.u-text-grey {
+  color: $grey;
+}
+
+.u-text-grey-1x-light {
+  color: $grey-1x-light;
+}
+
+.u-text-grey-2x-light {
+  color: $grey-2x-light;
+}
+
+.u-text-white {
+  color: $white;
+}
+
+// Weight
+// ------------------------------------------------------------------------ /
+.u-text-3x-bold {
+  font-weight: $font-3x-bold;
+}
+
+.u-text-2x-bold {
+  font-weight: $font-2x-bold;
+}
+
+.u-text-1x-bold {
+  font-weight: $font-1x-bold;
+}
+
+.u-text-semibold {
+  font-weight: $font-semibold;
+}
+
+.u-text-medium {
+  font-weight: $font-medium;
+}
+
+.u-text-normal {
+  font-weight: $font-normal;
+}
+
+.u-text-1x-light {
+  font-weight: $font-1x-light;
+}
+
+.u-text-2x-light {
+  font-weight: $font-2x-light;
+}
+
+.u-text-3x-light {
+  font-weight: $font-3x-light;
+}

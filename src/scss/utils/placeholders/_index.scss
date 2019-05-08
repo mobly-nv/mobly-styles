@@ -1,0 +1,26 @@
+// Placeholders
+// ----
+// ------------------------------------------------------------------------ /
+
+%button-reset {
+  border: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+%q-icon {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  // Enable Ligatures
+  font-feature-settings: "liga";
+  font-variant-ligatures: discretionary-ligatures;
+  letter-spacing: 0;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
