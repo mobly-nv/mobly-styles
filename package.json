@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all -p storybook watch",
     "build": "webpack",
     "build-storybook": "build-storybook",
     "lint": "stylelint 'src/scss' --cache --cache-location .stylelint/.stylelintcache --syntax scss",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "watch": "webpack -w --display minimal"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "cssnano": "4.1.10",
     "mini-css-extract-plugin": "0.6.0",
     "node-sass": "4.12.0",
+    "npm-run-all": "4.1.5",
     "postcss-loader": "3.0.0",
     "sass-loader": "7.1.0",
     "stylelint": "10.0.1",
