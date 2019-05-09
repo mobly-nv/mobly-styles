@@ -6,8 +6,10 @@
 // Main
 // ------------------------------------------------------------------------ /
 
-@import "quarks/index";
+@import "quarks/colors";
+@import "quarks/variables";
 @import "utils/index";
+@import "quarks/index";
 @import "base/index";
 @import "layout/index";
 @import "atoms/index";
