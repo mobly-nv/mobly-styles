@@ -8,6 +8,11 @@
   outline: 0;
 }
 
+%heading {
+  font-weight: $font-medium;
+  line-height: $line-height-headings;
+}
+
 %q-icon {
   font-style: normal;
   font-weight: normal;

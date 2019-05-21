@@ -33,3 +33,12 @@
 
   @return map-get($z-index, $_layer);
 }
+
+// Transition
+// ------------------------------------------------------------------------ /
+@function transition($_property, $_duration-key: "default", $_easing-key: "default", $_delay: 0ms) {
+  $_easing: map-get($motion-easing, $_easing-key);
+  $_duration: map-get($motion-duration, $_duration-key);
+
+  @return unquote($_property) $_duration $_easing $_delay;
+}
