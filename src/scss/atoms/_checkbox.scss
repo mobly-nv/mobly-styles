@@ -1,0 +1,70 @@
+// Checkbox
+// ----
+// ------------------------------------------------------------------------ /
+
+.a-checkbox {
+  display: flex;
+
+  cursor: pointer;
+}
+
+// Elements
+// ------------------------------------------------------------------------ /
+
+.a-checkbox__field {
+  display: none;
+
+  appearance: none;
+  outline: 0;
+}
+
+.a-checkbox__icon-container {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
+  background-color: $white;
+  border: 2px solid $border-color;
+  border-radius: $border-radius-sm;
+  transition:
+    transition("background-color"),
+    transition("border-color");
+}
+
+.a-checkbox__icon {
+  font-size: $font-size-1xl;
+
+  color: $white;
+  opacity: 0;
+  transition: transition("opacity");
+}
+
+.a-checkbox__label {
+  padding-left: 8px;
+  color: $grey;
+}
+
+// States
+// ------------------------------------------------------------------------ /
+
+.a-checkbox:hover {
+  .a-checkbox__icon {
+    color: $grey-1x-light;
+    opacity: 0.6;
+  }
+}
+
+.a-checkbox__field:checked {
+  ~ .a-checkbox__icon-container {
+    background-color: $primary-yellow;
+    border-color: $primary-yellow;
+
+    .a-checkbox__icon {
+      color: $white;
+      opacity: 1;
+    }
+  }
+}

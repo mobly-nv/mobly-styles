@@ -1,0 +1,110 @@
+// Button
+// ----
+// ------------------------------------------------------------------------ /
+
+$button-min-height: 48px;
+$button-hover-color: lighten($primary-yellow, 5%);
+
+.a-button {
+  @extend %button-reset;
+
+  display: inline-block;
+  min-height: $button-min-height;
+  padding: 13px 32px 12px;
+
+  font-size: 14px;
+  font-weight: $font-1x-bold;
+  line-height: 1.4;
+  text-transform: uppercase;
+
+  background-color: $primary-yellow;
+  border: 2px solid $primary-yellow;
+  border-radius: 24px;
+  color: $white;
+
+  transition: transition("color");
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $button-hover-color;
+    border-color: $button-hover-color;
+  }
+}
+
+// Elements
+// ------------------------------------------------------------------------ /
+
+.a-button__icon {
+  font-size: 16px;
+}
+
+// Modifiers
+// ------------------------------------------------------------------------ /
+
+// Appearance
+.a-button--outline {
+  background-color: transparent;
+  color: $primary-yellow;
+
+  &:hover {
+    background-color: transparent;
+    border-color: lighten($button-hover-color, 10%);
+    color: $button-hover-color;
+  }
+}
+
+// Icon
+.a-button--icon {
+  width: 48px;
+  padding: 0 24px;
+
+  line-height: $button-min-height;
+
+  .a-button__icon {
+    font-size: 18px;
+  }
+}
+
+.a-button--icon-left {
+  .a-button__icon {
+    margin-right: 8px;
+  }
+}
+
+.a-button--icon-right {
+  .a-button__icon {
+    margin-left: 8px;
+  }
+}
+
+// Color
+.a-button--blue {
+  background-color: $primary-blue;
+  border-color: $primary-blue;
+
+  &:hover {
+    background-color: lighten($primary-blue, 5%);
+    border-color: lighten($primary-blue, 5%);
+  }
+
+  &.a-button--outline {
+    color: $primary-blue;
+
+    &:hover {
+      background-color: transparent;
+      border-color: lighten($button-hover-color, 10%);
+      color: $button-hover-color;
+    }
+  }
+}
+
+// Size
+.a-button--fluid {
+  display: block;
+  width: 100%;
+}

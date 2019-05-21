@@ -1,0 +1,155 @@
+// Input
+// ----
+// ------------------------------------------------------------------------ /
+
+.a-input {
+  position: relative;
+}
+
+// Elements
+// ------------------------------------------------------------------------ /
+
+.a-input__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  font-size: $font-size-md;
+  font-weight: $font-medium;
+
+  color: $grey;
+  transition:
+    transition("top"),
+    transition("transform"),
+    transition("font-size");
+}
+
+.a-input__field-container {
+  display: flex;
+  height: 48px;
+
+  line-height: 1;
+
+  background-color: $white;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+}
+
+.a-input__field {
+  flex-grow: 1;
+  padding: 14px 16px 0;
+
+  font-size: $font-size-md;
+  font-weight: $font-medium;
+
+  appearance: none;
+  border: 0;
+  border-radius: $border-radius;
+  color: $font-color;
+  outline: 0;
+}
+
+.a-input__addon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  padding: 6px;
+
+  background-color: $eu-background;
+
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.a-input__icon-container {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+
+  .a-input__icon {
+    font-size: $font-size-1xl;
+
+    color: $grey-1x-light;
+  }
+}
+
+// Modifiers
+// ------------------------------------------------------------------------ /
+
+// Appearance
+.a-input--addon-left {
+  .a-input__label {
+    left: 64px;
+  }
+
+  .a-input__addon {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+}
+
+.a-input--no-float {
+  position: static;
+
+  .a-input__label {
+    position: static;
+
+    margin-bottom: 4px;
+  }
+}
+
+.a-input--required {
+  .a-input__label {
+    &::after {
+      content: "*";
+      color: $state-error;
+    }
+  }
+}
+
+// Size
+.a-input--lg {
+  .a-input__label,
+  .a-input__field {
+    font-size: $font-size-1xl;
+  }
+
+  .a-input__field-container {
+    height: 72px;
+  }
+
+  .a-input__field {
+    padding-top: 12px;
+  }
+
+  &.a-input--addon-left {
+    .a-input__addon {
+      padding: 8px;
+    }
+  }
+}
+
+// States
+// ------------------------------------------------------------------------ /
+
+.a-input:not(.a-input--no-float).is-focused {
+  .a-input__label {
+    top: 8px;
+    transform: translateY(0);
+
+    font-size: $font-size-xs;
+  }
+
+  .a-input__field-container {
+    box-shadow: $box-shadow;
+  }
+
+  &.a-input--lg {
+    .a-input__label {
+      font-size: $font-size-md;
+    }
+  }
+}

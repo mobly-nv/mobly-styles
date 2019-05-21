@@ -1,0 +1,40 @@
+// Link
+// ----
+// ------------------------------------------------------------------------ /
+.a-link {
+  text-decoration: none;
+
+  color: $primary-blue;
+  transition: transition("color");
+
+  &:hover {
+    color: $font-color;
+  }
+}
+
+// Modifiers
+// ------------------------------------------------------------------------ /
+
+// Icons
+.a-link--icon-left,
+.a-link--icon-right {
+  display: flex;
+  align-items: center;
+}
+
+.a-link--icon-left {
+  .a-link__icon {
+    margin-right: 4px;
+  }
+}
+
+.a-link--icon-right {
+  .a-link__icon {
+    margin-left: 4px;
+  }
+}
+
+// Appearance
+.a-link--underline {
+  text-decoration: underline;
+}
