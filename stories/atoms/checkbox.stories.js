@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf(`Atoms|Checkbox`, module)
+storiesOf(`Components|Atoms/Checkbox`, module)
   .add("Default", () => `
     <label for="check-input" class="a-checkbox">
       <input id="check-input" type="checkbox" class="a-checkbox__field" />

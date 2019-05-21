@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf(`Atoms|Link`, module)
+storiesOf(`Components|Atoms/Link`, module)
   .add("Default", () => `
     <a href="#" class="a-link">This is a link</a>
   `)

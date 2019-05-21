@@ -1,7 +1,5 @@
 import { storiesOf } from "@storybook/html";
 
-const atomsTitle = "Atoms";
-
 function button(cls = "", attr = null, inner = "") {
   const btn = document.createElement("button");
   btn.classList.add("a-button");
@@ -20,7 +18,7 @@ function button(cls = "", attr = null, inner = "") {
   return btn;
 };
 
-storiesOf(`${atomsTitle}|Button`, module)
+storiesOf("Components|Atoms/Button", module)
   .add("Default", () => button())
   .add("Outline", () => button("a-button--outline"))
   .add("Fluid", () => button("a-button--fluid"))

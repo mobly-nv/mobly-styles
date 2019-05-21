@@ -2,7 +2,7 @@ import { storiesOf } from "@storybook/html";
 
 import EuImage from "../../src/images/eu.png";
 
-storiesOf(`Atoms|Input`, module)
+storiesOf(`Components|Atoms/Input`, module)
   .add("Default", () => `
     <div class="a-input">
       <label for="text-input" class="a-input__label">Default input</label>
