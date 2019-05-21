@@ -1,0 +1,42 @@
+// Text
+// ----
+// ------------------------------------------------------------------------ /
+
+// Headings
+// ------------------------------------------------------------------------ /
+
+h1 {
+  @extend %heading;
+
+  font-size: $font-size-3xl;
+}
+
+h2 {
+  @extend %heading;
+
+  font-size: $font-size-2xl;
+}
+
+h3 {
+  @extend %heading;
+
+  font-size: $font-size-1xl;
+}
+
+h4 {
+  @extend %heading;
+
+  font-size: $font-size-lg;
+}
+
+h5 {
+  @extend %heading;
+
+  font-size: $font-size-md;
+}
+
+h6 {
+  @extend %heading;
+
+  font-size: $font-size-base;
+}

@@ -14,9 +14,9 @@ $tundora-grey: rgb(65, 65, 65);
 $porcelain-grey: rgb(244, 246, 247);
 
 // Secondary colors
-$bittersweet-red: rgb(242, 111, 112);
-$apple-green: rgb(83, 180, 72);
-$teal-blue: rgb(8, 76, 110);
+$bittersweet-red: rgb(242, 111, 112); // #F26F70
+$apple-green: rgb(83, 180, 72); // #53B448
+$teal-blue: rgb(8, 76, 110); // #084C6E
 
 $emperor-grey: rgb(81, 81, 81);
 $silver-chalice-grey: rgb(166, 166, 166);
@@ -27,16 +27,16 @@ $alto-grey: rgb(212, 212, 212);
 // Divide colors in logical variables
 
 // Primary
-$primary-blue: $pacific-blue;
-$primary-yellow: $buttercup-yellow;
+$primary-blue: $pacific-blue; // #00ACC2
+$primary-yellow: $buttercup-yellow; // #F4B912
 
 // Grayscale
 $black: rgb(0, 0, 0);
-$grey-2x-dark: $tundora-grey;
-$grey-1x-dark: $emperor-grey;
-$grey: $silver-chalice-grey;
-$grey-1x-light: $alto-grey;
-$grey-2x-light: $porcelain-grey;
+$grey-2x-dark: $tundora-grey; // #414141
+$grey-1x-dark: $emperor-grey; // #515151
+$grey: $silver-chalice-grey; // #A6A6A6
+$grey-1x-light: $alto-grey;  // #D4D4D4
+$grey-2x-light: $porcelain-grey; // #F4F6F7
 $white: rgb(255, 255, 255);
 
 // Font

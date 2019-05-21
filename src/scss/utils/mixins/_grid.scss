@@ -1,0 +1,40 @@
+// Grid
+// ----
+// ------------------------------------------------------------------------ /
+
+// Generator helpers
+// ------------------------------------------------------------------------ /
+
+@mixin make-col($_size, $_columns: $grid-cols) {
+  $_col-width: percentage($_size / $_columns);
+
+  flex: 0 0 $_col-width;
+  // Add a `max-width` to ensure content within each column does not blow out the width of the column.
+  // Applies to IE10+ and Firefox. Chrome and Safari do not appear to require this.
+  max-width: $_col-width;
+}
+
+@mixin make-col-offset($_size, $_columns: $grid-columns) {
+  $num: $_size / $_columns;
+
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Grid generator
+// ------------------------------------------------------------------------ /
+
+@mixin generate-grid-cols($_cols: $grid-cols, $_gutter: $grid-gutter, $_breakpoints: $grid-breakpoints) {
+  @for $_i from 1 through $_cols {
+    .l-col-#{$_i} {
+      @include make-col($_i, $_cols);
+    }
+
+    @each $_bp-suffix, $_bp in $_breakpoints {
+      .l-col-#{$_i}--#{$_bp-suffix} {
+        @include mq-at($_bp) {
+          @include make-col($_i, $_cols);
+        }
+      }
+    }
+  }
+}

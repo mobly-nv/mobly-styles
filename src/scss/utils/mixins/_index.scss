@@ -2,62 +2,7 @@
 // ----
 // ------------------------------------------------------------------------ /
 
-// Clearfix
-// ------------------------------------------------------------------------ /
-@mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-}
-
-// Font-face
-// ------------------------------------------------------------------------ /
-@mixin font-face($_name, $_url, $_style: normal, $_weight: normal) {
-  @font-face {
-    font-family: $_name;
-    src: url($_url + ".eot");
-    src:
-      url($_url + ".woff") format("woff2"),
-      url($_url + ".woff") format("woff"),
-      url($_url + ".ttf") format("truetype"),
-      url($_url + ".svg##{$_name}") format("svg");
-    font-style: $_style;
-    font-weight: $_weight;
-  }
-}
-
-// Transition
-// ------------------------------------------------------------------------ /
-@mixin transition($_property, $_duration-key: "default", $_easing-key: "default", $_delay: 0ms) {
-  $_easing: map-get($motion-easing, $_easing-key);
-  $_duration: map-get($motion-duration, $_duration-key);
-
-  transition: $_property $_duration $_easing $_delay;
-}
-
-// Media queries
-// ------------------------------------------------------------------------ /
-@mixin mq-at($_min-width) {
-  @media screen and (min-width: $_min-width) {
-    @content;
-  }
-}
-
-@mixin mq-to($_max-width) {
-  // minus 1px to prevent weird transition between breakpoints
-  $max-width-fix: minus-1px($_max-width);
-
-  @media screen and (max-width: $max-width-fix) {
-    @content;
-  }
-}
-
-@mixin mq-between($_min-width, $_max-width) {
-  $max-width-fix: minus-1px($_max-width);
-
-  @media screen and (min-width: $_min-width) and (max-width: $max-width-fix) {
-    @content;
-  }
-}
+@import "clearfix";
+@import "font";
+@import "grid";
+@import "media";

@@ -1,0 +1,26 @@
+// Media query mixins
+// ----
+// ------------------------------------------------------------------------ /
+
+@mixin mq-at($_min-width) {
+  @media screen and (min-width: $_min-width) {
+    @content;
+  }
+}
+
+@mixin mq-to($_max-width) {
+  // minus 1px to prevent weird transition between breakpoints
+  $max-width-fix: minus-1px($_max-width);
+
+  @media screen and (max-width: $max-width-fix) {
+    @content;
+  }
+}
+
+@mixin mq-between($_min-width, $_max-width) {
+  $max-width-fix: minus-1px($_max-width);
+
+  @media screen and (min-width: $_min-width) and (max-width: $max-width-fix) {
+    @content;
+  }
+}

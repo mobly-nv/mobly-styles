@@ -5,10 +5,11 @@
 
 // Borders
 // ------------------------------------------------------------------------ /
-$border-radius: 4px !default;
+$border-radius: 8px !default;
 
 // Font & typography
 // ------------------------------------------------------------------------ /
+
 // Font family
 $font-family: "futura-pt", "Open Sans", sans-serif !default;
 
@@ -40,6 +41,7 @@ $line-height-headings: 1.1 !default;
 
 // Layout
 // ------------------------------------------------------------------------ /
+
 // Breakpoints
 $bp-xl: 1200px !default;
 $bp-lg: 992px !default;
@@ -49,6 +51,18 @@ $bp-xs: 320px !default;
 
 // Containers
 $container-width: 960px !default;
+$container-padding: 0 2rem !default;
+
+// Grid
+$grid-breakpoints: (
+  "xs": $bp-xs,
+  "sm": $bp-sm,
+  "md": $bp-md,
+  "lg": $bp-lg,
+  "xl": $bp-xl,
+) !default;
+$grid-cols: 12 !default;
+$grid-gutter: 1rem !default;
 
 // Motion (animations & transitions)
 // ------------------------------------------------------------------------ /
@@ -56,7 +70,7 @@ $container-width: 960px !default;
 // https://material.io/design/motion/speed.html#
 
 $motion-duration: (
-  "slow-2x": 300ms,
+  slow-2x: 300ms,
   "slow-1x": 250ms,
   "default": 200ms,
   "fast-1x": 150ms,
@@ -68,7 +82,7 @@ $motion-easing: (
   "decelerate": cubic-bezier(0, 0, 0.2, 1),
   "default": cubic-bezier(0.4, 0, 0.2, 1),
   "accelerate": cubic-bezier(0.4, 0, 1, 1),
-) !default !default;
+) !default;
 
 // Spacing
 // ------------------------------------------------------------------------ /
