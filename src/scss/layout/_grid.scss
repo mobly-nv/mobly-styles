@@ -1,0 +1,34 @@
+// Grid
+// ----
+// ------------------------------------------------------------------------ /
+
+.l-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$grid-gutter;
+  margin-left: -$grid-gutter;
+}
+
+// Elements
+// ------------------------------------------------------------------------ /
+
+[class*="l-col-"] {
+  width: 100%;
+  padding-right: $grid-gutter;
+  padding-left: $grid-gutter;
+}
+
+@include generate-grid-cols();
+
+// Modifiers
+// ------------------------------------------------------------------------ /
+
+.l-grid--no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class*="l-col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

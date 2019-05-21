@@ -1,0 +1,13 @@
+// Wrapper
+// ----
+// ------------------------------------------------------------------------ /
+
+.l-wrapper {
+  max-width: $container-width;
+  padding: $container-padding;
+  margin: 0 auto;
+}
+
+.l-widget-wrapper {
+  max-width: 448px;
+}
