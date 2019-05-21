@@ -5,6 +5,9 @@ module.exports = {
   ],
   rules: {
     "at-rule-no-unknown": null,
+    "declaration-empty-line-before": ["always", {
+      ignore: ["after-comment", "after-declaration", "first-nested"],
+    }],
     "scss/at-rule-no-unknown": true,
   },
   ignoreFiles: [

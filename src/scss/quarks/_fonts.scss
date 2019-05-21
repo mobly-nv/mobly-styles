@@ -1,8 +1,12 @@
-// Fonts
+// Font mixins
 // ----
 // ------------------------------------------------------------------------ /
 
-$moblycons-font-path: "../assets/fonts/moblycons";
+// Import Futura PT font from typekit
+@import url("https://use.typekit.net/jdw6bno.css");
 
-@include font-face("MoblyconsFill", "#{$moblycons-font-path}/moblycons-fill");
-@include font-face("MoblyconsLine", "#{$moblycons-font-path}/moblycons-line");
+$moblycons-cdn-url: "https://d1azc1qln24ryf.cloudfront.net/161353";
+$cache-bust: "?bcx8nz";
+
+@include font-face("MoblyconsFill", "#{$moblycons-cdn-url}/moblycons-fill/MoblyconsFill", $cache-bust);
+@include font-face("MoblyconsLine", "#{$moblycons-cdn-url}/moblycons-line/MoblyconsLine", $cache-bust);

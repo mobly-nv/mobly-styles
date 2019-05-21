@@ -8,17 +8,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const resolvePath = (_path) => path.resolve(__dirname, _path);
 
-const defaultUrlLoader = {
-  loader: "url-loader",
-  options: {
-    // If the limit is exceeded it will by default fallback to the file-loader
-    limit: 10000,
-    // file-loader options
-    name: "[path][name]-[hash:7].[ext]",
-    context: "src",
-  }
-};
-
 module.exports = {
   mode: "production",
   entry: "./src/scss/index.scss",
@@ -28,18 +17,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(eot|svg|ttf|woff2?)$/,
-        include: [
-          resolvePath("src/assets/fonts"),
-        ],
-        use: defaultUrlLoader,
-      },
-      {
         test: /\.(jpg|png)$/,
         include: [
           resolvePath("src/assets/img"),
         ],
-        use: defaultUrlLoader,
+        use: {
+          loader: "url-loader",
+          options: {
+            // If the limit is exceeded it will by default fallback to the file-loader
+            limit: 10000,
+            // file-loader options
+            name: "[path][name]-[hash:7].[ext]",
+            context: "src",
+          },
+        },
       },
       {
         test: /\.scss$/,
@@ -66,9 +57,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ["**/*.js"],
+    }),
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].css",
+      filename: "css/[name].css",
       chunkFilename: "[id].css",
     }),
     new CopyWebpackPlugin([
