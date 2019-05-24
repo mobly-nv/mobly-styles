@@ -57,9 +57,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ["**/*.js"],
-    }),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
       chunkFilename: "[id].css",

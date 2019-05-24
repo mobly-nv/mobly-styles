@@ -1,8 +1,12 @@
 {
   "name": "@mobly-ui/styles",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Styles for Mobly",
+  "main": "src/scss/index.scss",
+  "files": [
+    "dist/css",
+    "dist/scss"
+  ],
   "scripts": {
     "start": "npm-run-all -p storybook watch",
     "build": "webpack",
@@ -16,7 +20,7 @@
     "url": "git+https://github.com/mobly-nv/mobly-styles.git"
   },
   "keywords": [],
-  "author": "Andry Charlier",
+  "author": "Andry Charlier <andry.charlier@studiohyperdrive.be>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mobly-nv/mobly-styles/issues"
