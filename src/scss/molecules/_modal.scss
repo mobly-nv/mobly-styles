@@ -1,0 +1,68 @@
+// Modal
+// ----
+// ------------------------------------------------------------------------ /
+
+$modal-overlay-gradient: linear-gradient(135deg, rgba($blue-1x-dark, 0.48), rgba($blue-1x-dark, 0.88));
+
+// Elements
+// ------------------------------------------------------------------------ /
+
+.m-modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: layer("modal-overlay");
+
+  background-image: $modal-overlay-gradient;
+  opacity: 0;
+}
+
+.m-modal__box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: layer("modal-box");
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 100%;
+  padding: $spacer-1xl;
+
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px rgba($grey-2x-dark, 0.12);
+  opacity: 0;
+
+  @include mq-at($bp-md) {
+    max-width: 440px;
+    padding: $spacer-1xl rem(64px);
+  }
+}
+
+.m-modal__close {
+  position: absolute;
+  top: $spacer-1xs;
+  right: $spacer-1xs;
+}
+
+// States
+// ------------------------------------------------------------------------ /
+
+.m-modal.is-open {
+  display: block;
+
+  .m-modal__overlay {
+    animation: fade-in map-get($motion-duration, "default") map-get($motion-easing, "accelerate") both;
+  }
+
+  .m-modal__box {
+    animation:
+      fade-in
+      map-get($motion-duration, "default")
+      map-get($motion-duration, "default")
+      map-get($motion-easing, "accelerate")
+      both;
+  }
+}
+
