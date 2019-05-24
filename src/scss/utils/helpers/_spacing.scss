@@ -1,0 +1,40 @@
+// Spacing helpers
+// ----
+// ------------------------------------------------------------------------ /
+
+$spacer-map: (
+  "8": $spacer-2xl,
+  "7": $spacer-1xl,
+  "6": $spacer-lg,
+  "5": $spacer-md,
+  "4": $spacer,
+  "3": $spacer-sm,
+  "2": $spacer-1xs,
+  "1": $spacer-2xs,
+  "0": 0,
+  "auto": auto,
+) !default;
+
+$directions: (
+  "t": top,
+  "r": right,
+  "b": bottom,
+  "l": left,
+  "x": right left,
+  "y": top bottom,
+  "": top right bottom left
+);
+
+@each $_size, $_value in $spacer-map {
+  @each $_dir, $_props in $directions {
+    .u-m#{$_dir}-#{$_size} {
+      @if type-of($_props) == "string" {
+        $_props: append((), $_props);
+      }
+
+      @each $_prop in $_props {
+        margin-#{$_prop}: $_value;
+      }
+    }
+  }
+}
