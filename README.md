@@ -35,6 +35,7 @@ npm i @mobly/styles
 | start            | Start the project (runs storybook and watch tasks in parallel).
 | build            | Build project in dist/ folder.
 | build-storybook  | Build static storybook assets.
+| release          | Release new version.
 | storybook        | Run storybook for development on port 6006.
 | watch            | Watch src files.
 | lint             | Lints all the styles with stylelint.

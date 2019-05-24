@@ -58,7 +58,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/mobly_styles.min.css",
+      filename: "css/mobly.[hash].css",
       chunkFilename: "[id].css",
     }),
   ],
