@@ -5,18 +5,18 @@
 .l-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -$grid-gutter;
-  margin-left: -$grid-gutter;
+  margin-right: -$spacer;
+  margin-left: -$spacer;
+
+  > [class*="l-col-"] {
+    width: 100%;
+    padding-right: $spacer;
+    padding-left: $spacer;
+  }
 }
 
 // Elements
 // ------------------------------------------------------------------------ /
-
-[class*="l-col-"] {
-  width: 100%;
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
-}
 
 @include generate-grid-cols();
 
@@ -30,5 +30,35 @@
   > [class*="l-col-"] {
     padding-right: 0;
     padding-left: 0;
+  }
+}
+
+.l-grid--sm-gutter {
+  margin-right: -$spacer-1xs;
+  margin-left: -$spacer-1xs;
+
+  > [class*="l-col-"] {
+    padding-right: $spacer-1xs;
+    padding-left: $spacer-1xs;
+  }
+}
+
+.l-grid--padding-y {
+  margin-top: -$spacer;
+  margin-bottom: -$spacer;
+
+  > [class*="l-col-"] {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+  }
+
+  &.l-grid--sm-gutter {
+    margin-top: -$spacer-1xs;
+    margin-bottom: -$spacer-1xs;
+
+    > [class*="l-col-"] {
+      padding-top: $spacer-1xs;
+      padding-bottom: $spacer-1xs;
+    }
   }
 }

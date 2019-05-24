@@ -2,7 +2,7 @@
 // ----
 // ------------------------------------------------------------------------ /
 
-$button-min-height: 48px;
+$button-min-height: $spacer-2xl;
 $button-hover-color: lighten($primary-yellow, 5%);
 
 .a-button {
@@ -10,19 +10,20 @@ $button-hover-color: lighten($primary-yellow, 5%);
 
   display: inline-block;
   min-height: $button-min-height;
-  padding: 13px 32px 12px;
+  padding: $spacer-sm $spacer-1xl;
 
-  font-size: 14px;
+  font-family: inherit;
+  font-size: $font-size-sm;
   font-weight: $font-1x-bold;
   line-height: 1.4;
   text-transform: uppercase;
 
   background-color: $primary-yellow;
   border: 2px solid $primary-yellow;
-  border-radius: 24px;
+  border-radius: $spacer-lg;
   color: $white;
 
-  transition: transition("color");
+  transition: transition("border-color"), transition("color");
 
   &:disabled {
     cursor: not-allowed;
@@ -34,13 +35,6 @@ $button-hover-color: lighten($primary-yellow, 5%);
     background-color: $button-hover-color;
     border-color: $button-hover-color;
   }
-}
-
-// Elements
-// ------------------------------------------------------------------------ /
-
-.a-button__icon {
-  font-size: 16px;
 }
 
 // Modifiers
@@ -58,27 +52,38 @@ $button-hover-color: lighten($primary-yellow, 5%);
   }
 }
 
+.a-button--transparent {
+  background-color: transparent;
+  border-color: transparent;
+  color: $font-color;
+
+  &:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: $button-hover-color;
+  }
+}
+
 // Icon
 .a-button--icon {
-  width: 48px;
-  padding: 0 24px;
+  padding: 0 $spacer;
 
-  line-height: $button-min-height;
+  text-align: center;
 
   .a-button__icon {
-    font-size: 18px;
+    font-size: $font-size-lg;
   }
 }
 
 .a-button--icon-left {
   .a-button__icon {
-    margin-right: 8px;
+    margin-right: $spacer-1xs;
   }
 }
 
 .a-button--icon-right {
   .a-button__icon {
-    margin-left: 8px;
+    margin-left: $spacer-1xs;
   }
 }
 
@@ -93,6 +98,17 @@ $button-hover-color: lighten($primary-yellow, 5%);
   }
 
   &.a-button--outline {
+    background-color: transparent;
+    color: $primary-blue;
+
+    &:hover {
+      background-color: transparent;
+      border-color: lighten($primary-blue, 5%);
+      color: lighten($primary-blue, 5%);
+    }
+  }
+
+  &.a-button--transparent {
     color: $primary-blue;
 
     &:hover {

@@ -14,7 +14,7 @@
   max-width: $_col-width;
 }
 
-@mixin make-col-offset($_size, $_columns: $grid-columns) {
+@mixin make-offset($_size, $_columns: $grid-columns) {
   $num: $_size / $_columns;
 
   margin-left: if($num == 0, 0, percentage($num));
@@ -23,16 +23,30 @@
 // Grid generator
 // ------------------------------------------------------------------------ /
 
-@mixin generate-grid-cols($_cols: $grid-cols, $_gutter: $grid-gutter, $_breakpoints: $grid-breakpoints) {
+@mixin generate-grid-cols($_cols: $grid-cols, $_breakpoints: $grid-breakpoints) {
   @for $_i from 1 through $_cols {
     .l-col-#{$_i} {
       @include make-col($_i, $_cols);
     }
+  }
 
-    @each $_bp-suffix, $_bp in $_breakpoints {
-      .l-col-#{$_i}--#{$_bp-suffix} {
-        @include mq-at($_bp) {
+  @for $_i from 1 through ($_cols - 1) {
+    .l-offset-#{$_i} {
+      @include make-offset($_i, $_cols);
+    }
+  }
+
+  @each $_bp-suffix, $_bp in $_breakpoints {
+    @include mq-at($_bp) {
+      @for $_i from 1 through $_cols {
+        .l-col-#{$_i}--#{$_bp-suffix} {
           @include make-col($_i, $_cols);
+        }
+      }
+
+      @for $_i from 1 through ($_cols - 1) {
+        .l-offset-#{$_i}--#{$_bp-suffix} {
+          @include make-offset($_i, $_cols);
         }
       }
     }

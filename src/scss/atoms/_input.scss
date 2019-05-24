@@ -12,13 +12,14 @@
 .a-input__label {
   position: absolute;
   top: 50%;
-  left: 16px;
+  left: $spacer;
   transform: translateY(-50%);
 
   font-size: $font-size-md;
   font-weight: $font-medium;
 
   color: $grey;
+  pointer-events: none;
   transition:
     transition("top"),
     transition("transform"),
@@ -27,7 +28,7 @@
 
 .a-input__field-container {
   display: flex;
-  height: 48px;
+  height: $spacer-2xl;
 
   line-height: 1;
 
@@ -37,9 +38,10 @@
 }
 
 .a-input__field {
-  flex-grow: 1;
-  padding: 14px 16px 0;
+  width: 100%;
+  padding: rem(14px) $spacer 0;
 
+  font-family: inherit;
   font-size: $font-size-md;
   font-weight: $font-medium;
 
@@ -54,8 +56,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  padding: 6px;
+  width: $spacer-2xl;
+  padding: rem(6px);
 
   background-color: $eu-background;
 
@@ -68,7 +70,7 @@
 .a-input__icon-container {
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 $spacer-sm;
 
   .a-input__icon {
     font-size: $font-size-1xl;
@@ -83,7 +85,7 @@
 // Appearance
 .a-input--addon-left {
   .a-input__label {
-    left: 64px;
+    left: rem(64px);
   }
 
   .a-input__addon {
@@ -97,7 +99,7 @@
   .a-input__label {
     position: static;
 
-    margin-bottom: 4px;
+    margin-bottom: $spacer-2xs;
   }
 }
 
@@ -118,16 +120,16 @@
   }
 
   .a-input__field-container {
-    height: 72px;
+    height: rem(72px);
   }
 
   .a-input__field {
-    padding-top: 12px;
+    padding-top: $spacer-sm;
   }
 
   &.a-input--addon-left {
     .a-input__addon {
-      padding: 8px;
+      padding: $spacer-1xs;
     }
   }
 }
@@ -137,7 +139,7 @@
 
 .a-input:not(.a-input--no-float).is-focused {
   .a-input__label {
-    top: 8px;
+    top: $spacer-1xs;
     transform: translateY(0);
 
     font-size: $font-size-xs;

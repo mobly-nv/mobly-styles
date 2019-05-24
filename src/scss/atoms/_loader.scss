@@ -16,8 +16,8 @@
 // ------------------------------------------------------------------------ /
 
 .a-loader__indicator {
-  width: 48px;
-  height: 48px;
+  width: $spacer-2xl;
+  height: $spacer-2xl;
 
   animation: spin 1s infinite map-get($motion-easing, "default");
   border: 4px solid rgba($primary-blue, 0.2);

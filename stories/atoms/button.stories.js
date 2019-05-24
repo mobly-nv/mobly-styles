@@ -21,6 +21,7 @@ function button(cls = "", attr = null, inner = "") {
 storiesOf("Components|Atoms/Button", module)
   .add("Default", () => button())
   .add("Outline", () => button("a-button--outline"))
+  .add("Transparent", () => button("a-button--transparent"))
   .add("Fluid", () => button("a-button--fluid"))
   .add("Disabled", () => button("", { name: "disabled", value: true }))
   .add("Blue", () => button("a-button--blue"))

@@ -58,7 +58,6 @@ $grid-breakpoints: (
   "xl": $bp-xl,
 ) !default;
 $grid-cols: 12 !default;
-$grid-gutter: 1rem !default;
 
 // Motion (animations & transitions)
 // ------------------------------------------------------------------------ /
@@ -83,7 +82,14 @@ $motion-easing: (
 // Spacing
 // ------------------------------------------------------------------------ /
 
+$spacer-2xl: 3rem !default;
+$spacer-1xl: 2rem !default;
+$spacer-lg: 1.5rem !default;
+$spacer-md: 1.25rem !default;
 $spacer: 1rem !default;
+$spacer-sm: 0.75rem !default;
+$spacer-1xs: 0.5rem !default;
+$spacer-2xs: 0.25rem !default;
 
 // UI
 // ------------------------------------------------------------------------ /
@@ -100,7 +106,9 @@ $box-shadow: 0 2px 16px 0 rgba($grey-2x-dark, 0.12);
 // ------------------------------------------------------------------------ /
 
 $z-index: (
+  "modal-box": 10,
+  "modal-overlay": 9,
   "base": 1,
   "auto": 0,
-  "cellar": -1
+  "cellar": -1,
 ) !default;
