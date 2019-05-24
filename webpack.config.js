@@ -2,7 +2,6 @@ const path = require("path");
 
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -59,14 +58,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
+      filename: "css/mobly_styles.min.css",
       chunkFilename: "[id].css",
     }),
-    new CopyWebpackPlugin([
-      {
-        from: resolvePath("src/scss"),
-        to: resolvePath("dist/scss")
-      },
-    ]),
   ],
 };
