@@ -9,7 +9,7 @@ Style guide for Mobly. This package build contains:
 ## Install ##
 
 ```bash
-npm i @mobly-ui/styles
+npm i @mobly/styles
 ```
 
 ---

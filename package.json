@@ -1,5 +1,5 @@
 {
-  "name": "@mobly-ui/styles",
+  "name": "@mobly/styles",
   "version": "1.0.0",
   "description": "Styles for Mobly",
   "main": "src/scss/index.scss",
