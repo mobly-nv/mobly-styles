@@ -1,6 +1,6 @@
 {
   "name": "@mobly/styles",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Styles for Mobly",
   "main": "src/scss/index.scss",
   "files": [
@@ -12,7 +12,7 @@
     "build": "webpack",
     "build-storybook": "build-storybook",
     "lint": "stylelint 'src/scss' --cache --cache-location .stylelint/.stylelintcache --syntax scss",
-    "release": "standard-version --skip.changelog",
+    "release": "standard-version",
     "storybook": "start-storybook -p 6006",
     "watch": "webpack -w --display minimal"
   },
@@ -51,5 +51,10 @@
   },
   "dependencies": {
     "normalize.css": "8.0.1"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
   }
 }
